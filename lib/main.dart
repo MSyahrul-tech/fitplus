@@ -1,3 +1,6 @@
+// import 'package:fitplus/Authentication/login_screen.dart';
+// import 'package:fitplus/Authentication/register_screen.dart';
+import 'package:fitplus/screen/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,11 +13,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(body: LoginScreen()),
     );
   }
 }
