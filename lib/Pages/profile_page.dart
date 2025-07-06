@@ -1,5 +1,7 @@
+import 'package:fitplus/provider/dark_mode.dart';
 import 'package:fitplus/screen/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -20,6 +22,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
       "Jepang",
       "India",
     ];
+
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    final isDarkMode = themeProvider.isDarkMode;
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -85,11 +90,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const Divider(),
             ListTile(
               trailing: Switch(
-                value: true,
+                value: isDarkMode,
                 onChanged: (bool value) {
-                  // setState(() {
-
-                  // });
+                  setState(() {
+                    themeProvider.toggleTheme(value);
+                  });
                 },
               ),
               title: const Text("Dark Mode", style: TextStyle(fontSize: 16)),
