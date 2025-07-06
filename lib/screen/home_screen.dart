@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 // import 'package:fitplus/Authentication/login_screen.dart';
- import 'consultasion_page.dart';
+import 'consultasion_page.dart';
 // import 'healty_food_page.dart';
 // import 'reminder_sleep_page.dart';
-// import 'Sport_Page.dart';
+ import 'Sport_Page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -55,14 +55,14 @@ class _HomeScreenState extends State<HomeScreen> {
             imagePath: "assets/images/sport.png",
             label: "SPORT",
             onTap: () {
-              // Navigator.push(context, MaterialPageRoute(builder: (_) => SportPage()));
+               Navigator.push(context, MaterialPageRoute(builder: (_) => SportPage()));
             },
           ),
           _buildGridItem(
             imagePath: "assets/images/consultation-time.png",
             label: "CONSULTATION TIME",
             onTap: () {
-              // Navigator.push(context, MaterialPageRoute(builder: (_) => ConsultationPage()));
+               Navigator.push(context, MaterialPageRoute(builder: (_) => ConsultationPage()));
             },
           ),
         ],
